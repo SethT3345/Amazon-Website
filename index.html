@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
     <title>Amazon</title>
 </head>
 <body>
@@ -38,8 +39,8 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
             <!--Product 1-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/Socks.png" class="w-45 h-50">
-                <p1 class="amzfont">Mens Colorful Socks Set</p1>
+                <img id="p1image" src="Images/Socks.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p1name">Mens Colorful Socks Set</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -57,7 +58,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p1quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -69,13 +70,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$10.90</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p1price">$10.90</h1>
+                <button onclick="createProduct(1)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 2-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/LebronBall.webp" class="w-45 h-50">
-                <p1 class="amzfont">Lebron James Basketball</p1>
+                <img id="p2image" src="Images/LebronBall.webp" class="w-45 h-50">
+                <p1 class="amzfont" id="p2name">Lebron James Basketball</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -93,7 +94,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p2quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -105,13 +106,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$20.95</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p2price">$20.95</h1>
+                <button onclick="createProduct(2)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 3-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/DogTee.webp" class="w-45 h-50">
-                <p1 class="amzfont">Dog T-Shirt</p1>
+                <img id="p3image" src="Images/DogTee.webp" class="w-45 h-50">
+                <p1 class="amzfont" id="p3name">Dog T-Shirt</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -129,7 +130,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p3quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -141,13 +142,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$7.99</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p3price">$7.99</h1>
+                <button onclick="createProduct(3)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 4-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/Toaster.png" class="w-45 h-50">
-                <p1 class="amzfont">High End Toaster</p1>
+                <img id="p4image" src="Images/Toaster.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p4name">High End Toaster</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -165,7 +166,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p4quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -177,13 +178,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$18.99</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p4price">$18.99</h1>
+                <button onclick="createProduct(4)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 5-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/PlateSet.png" class="w-45 h-50">
-                <p1 class="amzfont">Authentic Plate Set</p1>
+                <img id="p5image" src="Images/PlateSet.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p5name">Authentic Plate Set</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -201,7 +202,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p5quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -213,13 +214,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$20.67</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p5price">$20.67</h1>
+                <button onclick="createProduct(5)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 6-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/MarinersHoodie.png" class="w-45 h-50">
-                <p1 class="amzfont">Seattle Mariners Hoodie</p1>
+                <img id="p6image" src="Images/MarinersHoodie.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p6name">Seattle Mariners Hoodie</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -237,7 +238,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p6quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -249,13 +250,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$24.00</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p6price">$24.00</h1>
+                <button onclick="createProduct(6)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 7-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/Towels.png" class="w-45 h-50">
-                <p1 class="amzfont">White Towel Set</p1>
+                <img id="p7image" src="Images/Towels.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p7name">White Towel Set</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -273,7 +274,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p7quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -285,13 +286,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$35.99</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p7price">$35.99</h1>
+                <button onclick="createProduct(7)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 8-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/Tide.png" class="w-45 h-50">
-                <p1 class="amzfont">Tide Laundry Detergent</p1>
+                <img id="p8image" src="Images/Tide.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p8name">Tide Laundry Detergent</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -309,7 +310,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p8quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -321,13 +322,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$28.99</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p8price">$28.99</h1>
+                <button onclick="createProduct(8)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 9-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/TravisScott.avif" class="w-45 h-50">
-                <p1 class="amzfont">Mens Brown Shoes</p1>
+                <img id="p9image" src="Images/TravisScott.avif" class="w-45 h-50">
+                <p1 class="amzfont" id="p9name">Mens Brown Shoes</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -345,7 +346,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p9quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -357,13 +358,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$33.90</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p9price">$33.90</h1>
+                <button onclick="createProduct(9)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 10-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/RayBan.png" class="w-45 h-50">
-                <p1 class="amzfont">Meta Sunglasses</p1>
+                <img id="p10image" src="Images/RayBan.png" class="w-45 h-50">
+                <p1 class="amzfont" id="p10name">Meta Sunglasses</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -381,7 +382,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p10quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -393,13 +394,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$15.60</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p10price">$15.60</h1>
+                <button onclick="createProduct(10)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 11-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/Sandals.avif" class="w-45 h-50">
-                <p1 class="amzfont">Girls Sandals</p1>
+                <img id="p11image" src="Images/Sandals.avif" class="w-45 h-50">
+                <p1 class="amzfont" id="p11name">Girls Sandals</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -417,7 +418,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p11quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -429,13 +430,13 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$24.99</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p11price">$24.99</h1>
+                <button onclick="createProduct(11)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
             <!--Product 12-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
-                <img src="Images/Curtains.webp" class="w-45 h-50">
-                <p1 class="amzfont">Blackout Curtains</p1>
+                <img id="p12image" src="Images/Curtains.webp" class="w-45 h-50">
+                <p1 class="amzfont" id="p12name">Blackout Curtains</p1>
                 <div class="flex flex-row">
                 <span class="material-symbols-outlined text-yellow-400">
                     stars
@@ -453,7 +454,7 @@
                     stars
                 </span>
                 </div>
-                <select class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
+                <select id="p12quantity" class="mt-2 bg-gray-200 border-1 border-gray-500 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -465,10 +466,12 @@
                     <option>9</option>
                     <option>10</option>
                 </select>
-                <h1 class="amzfont">$45.99</h1>
-                <button class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                <h1 class="amzfont" id="p12price">$45.99</h1>
+                <button onclick="createProduct(12)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
             </div>
         </div>
+
+    
 
 </body>
 </html>
