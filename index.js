@@ -14,9 +14,13 @@ class Product {
     };
 };
 
-const products = {};
+const existingProducts = localStorage.getItem('cartProducts');
+const products = existingProducts ? JSON.parse(existingProducts) : {};
+
 let cartitems = document.getElementById('cartitems');
-let checkprods = 0;
+
+const existingCount = localStorage.getItem('checkprods');
+let checkprods = existingCount ? JSON.parse(existingCount) : 0;
 
 function createProduct(pn) {
     products[`product${pn}`] = new Product(
