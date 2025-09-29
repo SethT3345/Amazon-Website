@@ -15,7 +15,8 @@ class Product {
 };
 
 const products = {};
-let productnum = 0;
+let cartitems = document.getElementById('cartitems');
+let checkprods = 0;
 
 function createProduct(pn) {
     products[`product${pn}`] = new Product(
@@ -27,6 +28,9 @@ function createProduct(pn) {
     
     localStorage.setItem('cartProducts', JSON.stringify(products));
     console.log(products[`product${pn}`]);
+
+    checkprods += 1;
+    localStorage.setItem('checkprods', JSON.stringify(checkprods));
 
     return products[`product${pn}`];
 }
