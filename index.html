@@ -31,7 +31,7 @@
             <span class="material-symbols-outlined transition-colors duration-150 hover:text-slate-500" onclick="checkout()">
             shopping_cart
             </span>
-            <p1 class="amzfont text-xl mr-4">(0)</p1>
+            <p1 id="cartCount" class="amzfont text-xl mr-4">(0)</p1>
         </div>
     </div>
 
@@ -71,7 +71,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p1price">$10.90</h1>
+                <div id="p1button">
                 <button onclick="createProduct(1)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 2-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -107,7 +109,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p2price">$20.95</h1>
+                <div id="p2button">
                 <button onclick="createProduct(2)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 3-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -143,7 +147,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p3price">$7.99</h1>
+                <div id="p3button">
                 <button onclick="createProduct(3)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 4-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -179,7 +185,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p4price">$18.99</h1>
+                <div id="p4button">
                 <button onclick="createProduct(4)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 5-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -215,7 +223,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p5price">$20.67</h1>
+                <div id="p5button">
                 <button onclick="createProduct(5)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 6-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -251,7 +261,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p6price">$24.00</h1>
+                <div id="p6button">
                 <button onclick="createProduct(6)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 7-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -287,7 +299,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p7price">$35.99</h1>
+                <div id="p7button">
                 <button onclick="createProduct(7)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 8-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -323,7 +337,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p8price">$28.99</h1>
+                <div id="p8button">
                 <button onclick="createProduct(8)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 9-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -359,7 +375,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p9price">$33.90</h1>
+                <div id="p9button">
                 <button onclick="createProduct(9)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 10-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -395,7 +413,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p10price">$15.60</h1>
+                <div id="p10button">
                 <button onclick="createProduct(10)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 11-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -431,7 +451,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p11price">$24.99</h1>
+                <div id="p11button">
                 <button onclick="createProduct(11)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
             <!--Product 12-->
             <div class="h-87 border-1 border-gray-500 flex items-center flex-col">
@@ -467,7 +489,9 @@
                     <option>10</option>
                 </select>
                 <h1 class="amzfont" id="p12price">$45.99</h1>
+                <div id="p12button">
                 <button onclick="createProduct(12)" class="w-40 mt-1 transition-colors h-7 bg-yellow-400 rounded-lg amzfont transition-shadow duration-300 hover:shadow-2xl">Add To Cart</button>
+                </div>
             </div>
         </div>
 
