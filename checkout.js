@@ -29,6 +29,21 @@ window.addEventListener('load', function addItems(){
         
         let storedProducts = localStorage.getItem('cartProducts');
         let products = JSON.parse(storedProducts);
+
+        let htmlTotal = document.getElementById("htmlTotal");
+        let htmlTax = document.getElementById("htmlTax");
+        let htmlTBT = document.getElementById("htmlTBT");
+        let htmlSH = document.getElementById("htmlSH");
+        let htmlItems = document.getElementById("htmlItems");
+
+        let Total = 0;
+        let Tax = 0;
+        let TBT = 0;
+        let SH = 0;
+        let Items = 0;
+
+        
+        
         
         for(let productKey in products){
             let product = products[productKey];
@@ -46,6 +61,37 @@ window.addEventListener('load', function addItems(){
                         <h1 class="amzfont text-2xl ml-auto text-red-500 mr-3">${product.Price}</h1><br>
                     </div>`;
 
+            
+            let priceWithoutDollar = product.Price.replace('$', '');
+            let priceAsNumber = parseFloat(priceWithoutDollar);
+            let quantityAsNumber = parseInt(product.Quantity);
+
+            // Just accumulate the subtotal and item count
+            Total += (priceAsNumber * quantityAsNumber);
+            Items += quantityAsNumber;
+
+        }
+        
+
+        SH = Items * 5; 
+        TBT = Total + SH; 
+        Tax = TBT * 0.10; 
+        Total = TBT + Tax;
+        
+        if (htmlTotal) {
+            htmlTotal.innerHTML = `$${Total.toFixed(2)}`;
+        }
+        if (htmlItems) {
+            htmlItems.innerHTML = Items;
+        }
+        if (htmlSH){
+            htmlSH.innerHTML = `$${SH.toFixed(2)}`
+        }
+        if (htmlTBT){
+            htmlTBT.innerHTML = `$${TBT.toFixed(2)}`
+        }
+        if(htmlTax){
+            htmlTax.innerHTML = `$${Tax.toFixed(2)}`
         }
     }
 })
